@@ -86,7 +86,7 @@ nums_small = [
 
 # OLED SCREEN DRIVER
 class OLED(framebuf.FrameBuffer):
-    def __init__(self, i2c_num=1, i2c_scl=7, i2c_sda=6, i2c_freq=1_000_000):
+    def __init__(self, i2c_num=1, i2c_scl=7, i2c_sda=6, i2c_freq=3_000_000): # Set i2c_freq to 1_000_000 if using non "W" Pico!
         
         self.width  = 128
         self.height = 128
