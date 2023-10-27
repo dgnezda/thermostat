@@ -1,4 +1,4 @@
-THERMOSTAT APP V. 1.00
+Thermostat App V. 1.00
 ======================
 by Domen Gnezda
 
@@ -13,8 +13,8 @@ potentiometer and 128*128 OLED screen.
 
 Instructions:
 
-- Set thermostat temperature with potentiometer.
-- Press Blue key (button) to exit app
+* Set thermostat temperature with potentiometer.
+* Press Blue key (button) to exit app
 
 Put one finger onto the Raspberry Pico microprocessor chip to warm it up
 and see the room temperature (Temp) rise - chip temperature is used for this
@@ -43,5 +43,8 @@ Example of OLED screen reading:
     +--------------+
 
 
-* If used with non "W" PICO model, make sure to use correct PIN numbers!
-* OLED driver Class by Waveshare (make of Sensor kit) is used.
+* If used with non "W" PICO model, make sure to use correct PIN numbers! Also, the
+  freq setting in the OLED driver class needs to be set to 1_000_000 for non "W"
+  Pico model, and to 3_000_000 for the Pico W.
+* OLED driver Class by Waveshare (make of Sensor kit) is used. 
+* ASCII font by patorjk.com
