@@ -5,50 +5,15 @@
     
     For Raspberry PICO W + Waveshare Sensor Kit
     
-    
-    About:
-    Thermostat app is a simulation of a thermostat application, using Raspberry
-    PICO's built in temperature sensor, external color LED, red LED, pushbutton,
-    potentiometer and 128*128 OLED screen.
-    
-    
     Instructions:
     
     - Set thermostat temperature with potentiometer.
     - Press Blue key (button) to exit app
-    
-    Room temperature (Temp) is represented on top line ("Temp: 20.0 C").
-    Thermostat temperature setting is represented with big ASCII numbers.
+    - If used with non "W" PICO model, make sure to use correct PIN numbers! Also, the
+      freq setting in the OLED driver class needs to be set to 1_000_000 for non "W"
+      Pico model, and to 3_000_000 for the Pico W.
 
-    Put one finger onto the Raspberry Pico microprocessor chip to warm it up
-    and see the room temperature (Temp) rise - chip temperature is used for this
-    reading.
-    
-    If thermostat temperature is set above room temperature, a red LED will
-    start to blink, representing the ON state of an imaginary heating system.
-    An additional color LED is used as feedback to be able to quickly assert
-    room temperature. The colors used are BLUE for cold, GREEN for normal,
-    ORANGE for warm, RED for hot.
-    
-    A so called "power bar" of # symbols is used as additional visual feedback 
-    to represent the setting of the thermostat. More #-s means warmer.
-    
-    Example of OLED screen reading:
-    
-    +--------------+
-    |              |
-    | Temp: 20.0 C |
-    |              |
-    | .-. .-.  .-. |
-    | .'' |\|  |\| |
-    | `-- `-'. `-' |
-    |              |
-    |  ######      |
-    +--------------+
-    
-    
-    * If used with non "W" PICO model, make sure to use correct PIN numbers!
-    * OLED driver Class by Waveshare (make of Sensor kit) is used.
+    For more info check README.md!
 
 """
 
@@ -233,10 +198,10 @@ def set_rgb_led(temp):
     if temp > 23.5:
         rgb_led[0]=(0, 4, 0) # red
         rgb_led.write()
-    elif temp > 23:
+    elif temp > 22:
         rgb_led[0]=(2, 2, 0) # orange
         rgb_led.write()
-    elif temp > 21:
+    elif temp > 20:
         rgb_led[0]=(4, 0, 0) # green
         rgb_led.write()
     else:
