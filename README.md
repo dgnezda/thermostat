@@ -5,13 +5,22 @@ by Domen Gnezda
 For Raspberry PICO W + Waveshare Sensor Kit
 
 
-About:
+## About
 Thermostat app is a simulation of a thermostat application, using Rasberry
 PICO's built in temperature sensor, external color LED, red LED, pushbutton,
 potentiometer and 128*128 OLED screen.
 
+## Installation
+* Install the PICO on the Sensor Kit
+* Connect Raspberry PICO/W with a USB calbe to your computer
+* Using an IDE like Thonny, either copy the file `thermostat.py` to your PICO
+  and run the script, or run it directly from your computer
+* Make sure to have the latest MicroPython SDK installed
+* In case you are not using the W version of PICO (with wifi), bur rather the
+  regular version, make sure to modify the frequency value of the OLED class
+  to 1_000_000 (set to 3_000_000 by default).
 
-Instructions:
+## Instructions
 
 * Set thermostat temperature with potentiometer.
 * Press Blue key (button) to exit app
